@@ -21,8 +21,9 @@
 title: Sensorleap
 email: contact@mayfly.dk
 description: User Manual
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mayfly-ai.github.io/sensorleap_manual" # the base hostname & protocol for your site, e.g. http://example.com
+repository: /mayfly-ai/sensorleap_manual
+baseurl: "/sensorleap_manual" # the subpath of your site, e.g. /blog
+#url: "https://mayfly-ai.github.io/sensorleap_manual" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  mayfly-ai
 
