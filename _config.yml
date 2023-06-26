@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: User Manual
+title: Sensorleap
 email: contact@mayfly.dk
-description: Sensorleap User Manual
+description: User Manual
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mayfly-ai.github.io/sensorleap_manual" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  mayfly-ai
 
 # Build settings
 remote_theme: rundocs/jekyll-rtd-theme
