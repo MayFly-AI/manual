@@ -12,7 +12,7 @@ INSERT VIDEO HERE
 
 **Assumptions:** Complete the guide to stream wirelessly to your desktop or laptop: [Setup guide](/sensorleap_manual/setup)
 
-Launch or make sure sensorleap wireless stream is running. See guide: [Setup guide](/sensorleap_manual/setup)
+Launch or make sure sensorleap wireless stream is running. See guide: [Setup guide](/sensorleap_manual/setup). We set the resolution to 720p (1280x720). Other resolutions also works for this demo.
 
 Clone yolov7 code from official repo:
 
