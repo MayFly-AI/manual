@@ -29,6 +29,11 @@ Navigate to this folder and run
 bundle install .
 ```
 
+You probably also need this one to make it work:
+```bash
+bundle add webrick
+```
+
 ### Run jekyll locally to test site before pushing changes to github
 ```bash
 bundle exec jekyll serve
