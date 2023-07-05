@@ -6,7 +6,9 @@ sort: 1
 
 This tutorial shows how to run YOLOv7 real-time 30fps on a low latency wireless video stream using MayFly wireless camera and a computer with a powerful GPU (we use RTX3090 but smaller should also work).
 
-INSERT VIDEO HERE
+{% include youtube.html id="vzdK8RTalmg" %}
+
+ <br/><br/>
 
 **Optional:** Steer iRobot Create3 around while running yolov7 live
 
