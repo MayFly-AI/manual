@@ -36,7 +36,7 @@ python detect_sensorleap.py --weights yolov7.pt --conf 0.25 --img-size 640 --vie
 **Optional** If you have an iRobot Create3 and wish to drive around while running YOLOv7 live, follow this guide [Drive iRobot Create3](/sensorleap_manual/create3/teleop)
 
 **Additional info**
-Sensorleap provides frames in BGR(A) format. If using the nvdecode H264 decoder (default), the frames are delivered in GPU memory. 
+Sensorleap provides frames in RGB(A) format. If using the nvdecode H264 decoder (default), the frames are delivered in GPU memory. 
 The detect.py in YOLOv7 does a bit of preprocessing on the frames which is code that runs on the CPU. Therefore frames are copied from
 GPU to CPU before running the YOLOv7 letterbox function and the typical BGR->RGB and =/255 conversions. A snippet that shows this preprocessing is
 shown below:
@@ -53,7 +53,7 @@ while True:
         arr = torch.from_dlpack(frm['image']).cpu().numpy()
     else:
         arr = np.from_dlpack(frm['image']).copy()
-    arr = arr[:,:,:3]
+    arr = cv2.cvtColor(arr[:,:,:3], cv2.COLOR_RGB2BGR)
     im0s = np.copy(arr)
 
     # Letterbox
