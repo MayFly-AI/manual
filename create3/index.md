@@ -1,9 +1,10 @@
 ---
-sort: 1
+sort: 3
 ---
 
-# Setup
-
-NOT DONE
+# iRobot Create3
 
 {% include list.liquid all=true %}
+
+
+

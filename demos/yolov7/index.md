@@ -4,7 +4,7 @@ sort: 1
 
 # YOLOv7
 
-This tutorial shows how to run YOLOv7 real-time 30fps on a low latency wireless video stream using our sensorleap wireless camera and a computer with a RTX3090.
+This tutorial shows how to run YOLOv7 real-time 30fps on a low latency wireless video stream using MayFly wireless camera and a computer with a powerful GPU (we use RTX3090 but smaller should also work).
 
 INSERT VIDEO HERE
 
@@ -31,16 +31,12 @@ Run the demo:
 python detect_sensorleap.py --weights yolov7.pt --conf 0.25 --img-size 640 --view-img
 ```
 
-**Optional** If you have an iRobot Create3 and wish to drive around while running YOLOv7 live, run in another terminal:
-```bash
-python send_keys.py
-```
-NOT DONE
+**Optional** If you have an iRobot Create3 and wish to drive around while running YOLOv7 live, follow this guide [Drive iRobot Create3](/sensorleap_manual/create3/teleop)
 
 **Additional info**
 Sensorleap provides frames in BGR(A) format. If using the nvdecode H264 decoder (default), the frames are delivered in GPU memory. 
 The detect.py in YOLOv7 does a bit of preprocessing on the frames which is code that runs on the CPU. Therefore frames are copied from
-CUDA to CPU before running the YOLOv7 letterbox function and the typical BGR->RGB and =/255 conversions. A snippet that shows this preprocessing is
+GPU to CPU before running the YOLOv7 letterbox function and the typical BGR->RGB and =/255 conversions. A snippet that shows this preprocessing is
 shown below:
 
 ```python
@@ -70,7 +66,6 @@ while True:
     img /= 255.0  # 0 - 255 to 0.0 - 1.0
     ...
 ```
-
 
 We forked the official yolov7 repo to have a timestamp of the code with our few additions. The fork is located at
 
