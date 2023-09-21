@@ -13,23 +13,16 @@ git clone https://github.com/MayFly-AI/ORB_SLAM3_pybind11.git
 
 Install Pangolin in a separate place. ORB-SLAM3 cmake will locate it.
 
-To compile ORB-SLAM3 with a C++14 compatible compiler (we are using Ubuntu 22.04), run the following command to edit the CMAkeLists.txt file:
-```bash
-cd ORB_SLAM3
-sed -i 's/++11/++14/g' CMakeLists.txt
-```
-
-To build ORB-SLAM3, do:
+We use C++14 compatible compiler (we are using Ubuntu 22.04). To build ORB-SLAM3, do:
 ```bash
 chmod +x build.sh
 ./build.sh
 ```
 
-The above step also compiles the pybind11 Python bindings and puts the resulting .so file in the ./lib folder.
+The above step also compiles the pybind11 Python bindings and puts the resulting bindings in a .so file in the ./lib folder.
 
 Now check if you can run one of the examples in the /Examples folder. For example, run the monocular EuRoC example by
 first downloading the EuRoC MAV dataset sequence: MH01 in ASL format:
-
 ```bash
 mkdir euroc
 cd euroc
@@ -56,6 +49,12 @@ You should see the ORB descriptors overlaid the current image and another window
 We have ported the Monocular EuRoC example to Python. To run this, do:
 ```bash
 python ./Examples_python/mono_euroc.py ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ./euroc/ ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt 
+```
+
+Note: To compile ORB-SLAM3 with a C++14 compatible compiler (we are using Ubuntu 22.04), we ran the following command to edit the CMakeLists.txt file.
+The fork already contains this change to the CMakeLists.txt file, so you don't need to do it.
+```bash
+sed -i 's/++11/++14/g' CMakeLists.txt
 ```
 
 
