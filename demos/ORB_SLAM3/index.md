@@ -5,8 +5,10 @@ sort: 1
 # ORB-SLAM3
 [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) is a real-time SLAM library able to perform Visual, Visual-Inertial and Multi-Map SLAM with monocular, stereo and RGB-D cameras, using pin-hole and fisheye lens models. ORB-SLAM3 is not based on neural networks and it does not need a GPU.
 
-ORB-SLAM3 is a C++ code. To use it easily in combination with other python based AI and our SensorLeap Python API, we have made a fork of ORB-SLAM3 with python bindings using pybind11. The python bindings is an add-on to the C++ ORB-SLAM3 code. It does not change any of the 
-original ORB-SLAM3 code, it only provides a 1:1 python interface with the same functions used in the C++ examples in ORB-SLAM3. Clone our forked repo here:
+{% include youtube.html id="T7V_WYiNEQ0" %}
+ <br/><br/>
+
+ORB-SLAM3 is a C++ code. To use it easily in combination with other python based AI and our SensorLeap Python API, we have made a fork of ORB-SLAM3 with python bindings using pybind11. It provides a 1:1 python interface with the same functions used in the C++ examples in ORB-SLAM3. Clone our forked repo here:
 ```bash
 git clone https://github.com/MayFly-AI/ORB_SLAM3_pybind11.git
 ```
@@ -28,16 +30,6 @@ mkdir euroc
 cd euroc
 wget http://robotics.ethz.ch/~asl-datasets/ijrr_euroc_mav_dataset/machine_hall/MH_01_easy/MH_01_easy.zip -P .
 unzip MH_01_easy.zip 
-```
-
-By default, the mono_euroc.cc example does not visualize the SLAM process. To turn on visualization, change the following line of code in ./Examples/Monocular/mono_euroc.cc
-```c++
-ORB_SLAM3::System SLAM(argv[1],argv[2],ORB_SLAM3::System::MONOCULAR, false);
-```
-from false to true. Recompile by:
-```bash
-cd build
-make
 ```
 
 Now run the example (from the root of the repo):
