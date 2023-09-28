@@ -1,5 +1,5 @@
 ---
-title: Drive around iRobot Create3 using a sensorleap camera
+title: Drive iRobot Create3 using a sensorleap camera
 sort: 1
 ---
 

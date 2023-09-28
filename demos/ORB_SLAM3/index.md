@@ -13,7 +13,7 @@ ORB-SLAM3 is a C++ code. To use it easily in combination with other python based
 git clone https://github.com/MayFly-AI/ORB_SLAM3_pybind11.git
 ```
 
-Install Pangolin in a separate place. ORB-SLAM3 cmake will locate it.
+Install Pangolin in a separate place. ORB-SLAM3 cmake will locate it. Follow the instructions [here](https://github.com/stevenlovegrove/Pangolin).
 
 We use C++14 compatible compiler (we are using Ubuntu 22.04). To build ORB-SLAM3, do:
 ```bash
@@ -42,6 +42,13 @@ We have ported the Monocular EuRoC example to Python. To run this, do:
 ```bash
 python ./Examples_python/mono_euroc.py ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ./euroc/ ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt 
 ```
+
+To run ORB-SLAM3 live with a stream from a MayFly AI sensor, first you need to calibrate the camera and put the intrinsic
+camera parameters into sensorleap.yaml. Follow this [guide](/sensorleap_manual/setup/calib_cam) for camera calibration. Then make sure stream is live and run:
+```bash
+python ./Examples_python/sensorleap.py ./Vocabulary/ORBvoc.txt ./Examples/Monocular/sensorleap.yaml
+```
+
 
 Note: To compile ORB-SLAM3 with a C++14 compatible compiler (we are using Ubuntu 22.04), we ran the following command to edit the CMakeLists.txt file.
 The fork already contains this change to the CMakeLists.txt file, so you don't need to do it.
