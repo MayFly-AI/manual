@@ -44,11 +44,14 @@ shown below:
 ```python
 config = ''
 frame_idx = -1
-cap = VideoCapture(list(range(64)), config)
+cap = SensorCapture(list(range(64)), config)
 while True:
-    frames = cap.read()
+    capture = cap.read()
+    if capture['type'] != 'camera':
+        continue
+
     frame_idx += 1
-    frm = frames[0] # It may have more than 1 frame if sync cameras or ToF. We assume 1 frame
+    frm = capture['frames'][0] # It may have more than 1 frame if sync cameras or ToF. We assume 1 frame
     if use_cuda:
         arr = torch.from_dlpack(frm['image']).cpu().numpy()
     else:
