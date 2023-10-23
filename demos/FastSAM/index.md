@@ -19,16 +19,10 @@ To enable FastSAM real-time with visualization of the result, we had to make a v
 
 Launch or make sure sensorleap wireless stream is running. See guide: [Setup guide](/sensorleap_manual/setup). We set the resolution to 720p (1280x720) and 30 FPS. On RTX3090 FastSAM is not able to run 30 FPS (only 15-16 FPS), which means frames are skipped to provide you with the latest frame at all times.
 
-Clone FastSAM code from official repo:
+Clone FastSAM fork:
 
 ```bash
-https://github.com/CASIA-IVA-Lab/FastSAM.git
-```
-
-Download our file `Inference_sensorleap.py` into the FastSAM folder:
-```bash
-cd FastSAM
-wget https://raw.githubusercontent.com/MayFly-AI/FastSAM/main/Inference_sensorleap.py -P .
+git clone https://github.com/MayFly-AI/FastSAM.git
 ```
 
 Run the demo (it automatically downloads the weights into the ./weights folder):
