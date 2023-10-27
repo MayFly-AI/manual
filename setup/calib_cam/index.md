@@ -78,7 +78,7 @@ k3=1.7397888801204173
 
 Note that we have not used the refined estimates (for a specific resolution) provided by:
 ```python
-newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h)).
+newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w,h), 1, (w,h))
 ```
 
 The intrinsic camera parameters can now be used for running the monocular SLAM demos.
