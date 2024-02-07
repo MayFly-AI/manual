@@ -12,7 +12,7 @@ dtparam=ant2
 ```
 
 Recommend dedicated access point. We have good experience with ASUS ZenWiFi Pro ET12. 
-On the access point, we disable 2.4GHz and 6Ghz and for the 5Ghz we find an undisturbed channel and set it to 80Mhz bandwith.
+On the access point, we disable the 2.4GHz and 6Ghz bands and for the 5Ghz band, we set it to 80MHz bandwith and find an undisturbed channel.
 On the RPI4, check the established wifi connection with
 ```bash
 iw dev wlan0 info
