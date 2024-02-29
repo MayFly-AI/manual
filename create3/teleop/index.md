@@ -1,20 +1,20 @@
 ---
-title: Drive iRobot Create3 using the wireless pose camera
-sort: 1
+title: Drive iRobot Create3
+sort: 2
 ---
 
 **Assumptions:** You installed and setup our ros2 docker container: [Setup ROS2 docker](/manual/ros2)
 
-There are different approaches to driving around the robot:
-
-1. ssh into camera approach
-2. send drive instructions from desktop or laptop approach
-
-## ssh into camera approach
 Begin by ssh'ing into camera.
 
 ### Start ros2 docker
-Docker container should be running. To make sure run:
+If ros2 docker is not running, you can run:
+```bash
+sudo docker run -it --net host ros_mayfly
+```
+
+### Attach to already running ros2 docker
+See if docker container is up by running:
 ```bash
 sudo docker ps
 ```
@@ -23,11 +23,6 @@ If docker container is running, you will get output looking something like:
 ```
 CONTAINER ID   IMAGE        COMMAND                  CREATED             STATUS             PORTS     NAMES
 a10d849da8cc   ros_mayfly   "/ros_entrypoint.sh …"   About an hour ago   Up About an hour             nice_archimedes
-```
-
-If ros2 docker is not running, you can run:
-```bash
-sudo docker run -it --net host ros_mayfly
 ```
 
 To attach to the docker container from above and get an interactive bash shell, run:
@@ -41,18 +36,20 @@ source /opt/ros/humble/setup.bash
 ```
 
 ### Install and run teleop_twist_keyboard package
-Create ros2 workspace folder:
+Inside ros2 docker, create ros2 workspace folder:
 ```bash
 mkdir -p ~/ros2_ws/src
 ```
 
 Clone `teleop_twist_keyboard` repository into `src` folder:
 ```bash
+cd ~/ros2_ws/src
 git clone https://github.com/ros2/teleop_twist_keyboard
 ```
 
 From `ros2_ws` folder, install dependencies (there probably are none):
 ```bash
+cd ..
 rosdep install -i --from-path src --rosdistro humble -y
 ```
 
@@ -79,7 +76,4 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
 Now you can move around the robot with `ijkl` keys.
-
-## send drive instructions from desktop approach
-NOT DONE
 
