@@ -44,7 +44,7 @@ python ./Examples_python/mono_euroc.py ./Vocabulary/ORBvoc.txt ./Examples/Monocu
 ```
 
 To run ORB-SLAM3 live with a stream from a MayFly AI sensor, first you need to calibrate the camera and put the intrinsic
-camera parameters into sensorleap.yaml. Follow this [guide](/sensorleap_manual/setup/calib_cam) for camera calibration. Then make sure stream is live and run:
+camera parameters into sensorleap.yaml. Follow this [guide](/manual/setup/calib_cam) for camera calibration. Then make sure stream is live and run:
 ```bash
 python ./Examples_python/sensorleap.py ./Vocabulary/ORBvoc.txt ./Examples/Monocular/sensorleap.yaml
 ```

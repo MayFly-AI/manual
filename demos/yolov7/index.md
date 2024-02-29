@@ -12,9 +12,9 @@ This tutorial shows how to run YOLOv7 real-time 30fps on a low latency wireless 
 
 **Optional:** Steer iRobot Create3 around while running yolov7 live
 
-**Assumptions:** Complete the guide to stream wirelessly to your desktop or laptop: [Setup guide](/sensorleap_manual/setup)
+**Assumptions:** Complete the guide to stream wirelessly to your desktop or laptop: [Setup guide](/manual/setup)
 
-Launch or make sure sensorleap wireless stream is running. See guide: [Setup guide](/sensorleap_manual/setup). We set the resolution to 720p (1280x720). Other resolutions also works for this demo.
+Launch or make sure wireless stream is running. See guide: [Setup guide](/manual/setup). We set the resolution to 720p (1280x720). Other resolutions also works for this demo.
 
 Clone yolov7 code from official repo:
 
@@ -33,7 +33,7 @@ Run the demo:
 python detect_sensorleap.py --weights yolov7.pt --conf 0.25 --img-size 640 --view-img
 ```
 
-**Optional** If you have an iRobot Create3 and wish to drive around while running YOLOv7 live, follow this guide [Drive iRobot Create3](/sensorleap_manual/create3/teleop)
+**Optional** If you have an iRobot Create3 and wish to drive around while running YOLOv7 live, follow this guide [Drive iRobot Create3](/manual/create3/teleop)
 
 **Additional info**
 Sensorleap provides frames in RGB(A) format. If using the nvdecode H264 decoder (default), the frames are delivered in GPU memory. 

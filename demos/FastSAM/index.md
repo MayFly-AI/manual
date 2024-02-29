@@ -15,9 +15,9 @@ To enable FastSAM real-time with visualization of the result, we had to make a v
 {% include youtube.html id="tGeM_HxjPQY" %}
  <br/><br/>
 
-**Assumptions:** Complete the guide to stream wirelessly to your desktop or laptop: [Setup guide](/sensorleap_manual/setup)
+**Assumptions:** Complete the guide to stream wirelessly to your desktop or laptop: [Setup guide](/manual/setup)
 
-Launch or make sure sensorleap wireless stream is running. See guide: [Setup guide](/sensorleap_manual/setup). We set the resolution to 720p (1280x720) and 30 FPS. On RTX3090 FastSAM is not able to run 30 FPS (only 15-16 FPS), which means frames are skipped to provide you with the latest frame at all times.
+Launch or make sure wireless stream is running. See guide: [Setup guide](/manual/setup). We set the resolution to 720p (1280x720) and 30 FPS. On RTX3090 FastSAM is not able to run 30 FPS (only 15-16 FPS), which means frames are skipped to provide you with the latest frame at all times.
 
 Clone FastSAM fork:
 
@@ -40,7 +40,7 @@ Note that when using text prompting, the FPS drops to less than 1, since OpenAI'
 
 It is also possible to use box prompt which given a bounding box (xywh) outputs the segmentation of the object inside it or to use a point prompt which given a pixel coordinate outputs the segmentation of the object you point at.
 
-**Optional** If you have an iRobot Create3 and wish to drive around while running FastSAM live, follow this guide [Drive iRobot Create3](/sensorleap_manual/create3/teleop)
+**Optional** If you have an iRobot Create3 and wish to drive around while running FastSAM live, follow this guide [Drive iRobot Create3](/manual/create3/teleop)
 
 We forked the official FastSAM repo to have a timestamp of the code with our few additions. The fork is located at
 

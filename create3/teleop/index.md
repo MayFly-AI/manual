@@ -1,9 +1,9 @@
 ---
-title: Drive iRobot Create3 using a sensorleap camera
+title: Drive iRobot Create3 using the wireless pose camera
 sort: 1
 ---
 
-**Assumptions:** You either bought a sensorleap camera where a ros2 docker is preinstalled and running or you installed and setup our ros2 docker container yourself: [Setup ROS2 docker](/sensorleap_manual/ros2)
+**Assumptions:** You installed and setup our ros2 docker container: [Setup ROS2 docker](/manual/ros2)
 
 There are different approaches to driving around the robot:
 
@@ -11,7 +11,7 @@ There are different approaches to driving around the robot:
 2. send drive instructions from desktop or laptop approach
 
 ## ssh into camera approach
-Begin by ssh'ing into sensorleap camera.
+Begin by ssh'ing into camera.
 
 ### Start ros2 docker
 Docker container should be running. To make sure run:

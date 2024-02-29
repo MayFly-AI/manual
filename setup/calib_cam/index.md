@@ -18,7 +18,7 @@ To increase accuracy of the calibration, it is recommended to have this pattern 
 
 The code for this tutorial is in the following [GitHub repository](https://github.com/MayFly-AI/camera_calib).
 
-First print chess_pattern.png and attach it to a flat hard surface. Then make sure the sensorleap sensor is running and you can receive a stream for it.
+First print chess_pattern.png and attach it to a flat hard surface. Then make sure the camera is running and you can receive a stream for it.
 Next run:
 ```bash
 python record.py

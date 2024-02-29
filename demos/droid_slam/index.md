@@ -41,7 +41,7 @@ content:
 fx fy cx cy [k1 k2 p1 p2 [ k3 [ k4 k5 k6 ]]]
 ```
 
-See our calibration file: ./calib/sensorleap.txt. Follow this [guide](/sensorleap_manual/setup/calib_cam) for camera calibration.
+See our calibration file: ./calib/sensorleap.txt. Follow this [guide](/manual/setup/calib_cam) for camera calibration.
 
 To run DROID-SLAM live on stream from MayFly AI sensor, run:
 
