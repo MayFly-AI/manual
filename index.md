@@ -1,4 +1,4 @@
-# Sensorleap User Manual
+# User manual
 
 ## Table of Contents
 
