@@ -18,6 +18,6 @@ sort: 1337
 - All sensors together example (UWB, IMU, Mag, RGB) on robot (Jakob)
 - Calibration (IMU, MAG, UWB) (Max)
 - Viewer with screenshot (Max/Jakob)
-
+- STM32 flash instructions (base and tag)
 
 
