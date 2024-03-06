@@ -31,6 +31,7 @@ github_username:  mayfly-ai
 remote_theme: rundocs/jekyll-rtd-theme
 plugins:
   - jekyll-feed
+  - jekyll-remote-include
 
 # Exclude from processing.
 # The following items will not be processed, by default.
