@@ -1,9 +1,11 @@
 ---
-layout: default
+sort: 2
 ---
 
 # Sync cameras
 
-{% remote_include https://raw.githubusercontent.com/MayFly-AI/camera_calib/main/README.md %}
+[Instructions here](https://github.com/MayFly-AI/picam/tree/main/python/examples/sync_cameras)
+
+
 
 
