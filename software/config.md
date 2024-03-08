@@ -101,13 +101,13 @@ The job of the sensor client is to receive, verify, and decode the data coming f
 
 The communication between services is provided for by ‘**transfer**’ which specifies the protocol and addresses of the communication endpoints.
 
-The **protocol** controls whether the communication should be done using UDP packets over ipv4: “**udp” **or - alternatively using packet injection with the pcap library: “**pcap”**. Each of these methods needs to specify the address of their local and remote endpoints.
+The **protocol** controls whether the communication should be done using UDP packets over ipv4: “**udp**” or - alternatively using packet injection with the pcap library: “**pcap**”. Each of these methods needs to specify the address of their local and remote endpoints.
 
 Transfer communication is typically set up for sensor servers, sensor clients, and debugging functionality.
 
 # Debugging
 
-Additional meta information useful for stream latency timing and data bandwidth can be communicated via ‘debugTiming’ and ‘debugTransfer’ when enabled.
+Additional meta information useful for stream latency timing and data bandwidth can be communicated via "**debugTiming**’ and ‘**debugTransfer**’ when enabled.
 
 # HTTP server
 
