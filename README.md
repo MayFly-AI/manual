@@ -26,7 +26,7 @@ gem install jekyll bundler
 
 Navigate to this folder and run
 ```bash
-bundle install .
+bundle install
 ```
 
 You probably also need this one to make it work:
