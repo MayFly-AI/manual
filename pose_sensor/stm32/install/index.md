@@ -23,19 +23,19 @@ pip install .
 ```
 
 ### Linux
-The code needs access to /dev/ttyACM0, which is owned by root with read/write permissions for the group dialout. To run without sudo, add your user to the dialout group:
+The code needs access to `/dev/ttyACM0`, which is owned by root with read/write permissions for the group dialout. To run without sudo, add your user to the dialout group:
 
 ```bash
 sudo usermod -a -G dialout <user>
 ```
 Log out and back in for this to take effect. It is not enough to open a new terminal window.
 
+### Mac
+on macOS the the code needs access to `/dev/cu.usbmodem-*` which this should just work with no change of permissions.
+
+
 ### Windows
 For windows, Visual Studio Code can be used..... FINISH THIS
-
-
-### Mac
-FINISH THIS
 
 
 {% include list.liquid all=true %}
