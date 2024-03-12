@@ -11,7 +11,11 @@ sort: 1
 ## On the Raspberry Pi
 Start by SSH'ing into your Raspberry Pi.
 
-Then on the Raspberry Pi, clone our code:
+Then on the Raspberry Pi
+```bash
+sudo apt install git cmake libgpiod-dev libcamera-dev
+```
+and clone our code:
 ```bash
 git clone https://github.com/MayFly-AI/mayfly.git
 ```

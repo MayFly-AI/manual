@@ -25,7 +25,11 @@ You can use other cameras. We have tried V2 and HQ. We recommend to use the Glob
 - Flash CM4 module with Raspberry Pi OS 64 bit lite using the Raspbery Pi Imager tool. We tested it with kernel 6.1.21 but others are likely to work.
 - Make sure you can SSH into the Raspberry Pi.
 - Attach camera to carrier board.
-- Add the following in the bottom of /boot/config.txt
+- In /boot/config.txt, comment out the line like this:
+```bash
+#camera_auto_detect=1
+```
+and add the following 2 lines in the bottom of the file:
 ```bash
 dtoverlay=dwc2,dr_mode=host
 dtoverlay=imx296,cam0
