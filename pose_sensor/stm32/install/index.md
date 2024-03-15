@@ -8,13 +8,13 @@ All source code is open-source. The code is located in 2 GitHub repositories. On
 repository for the host code and applications
 
 - [STM32 code repository](https://github.com/MayFly-AI/stm32-sensorleap)
-- [Host and applications code repository](https://github.com/MayFly-AI/sensorleap)
+- [Host and applications code repository](https://github.com/MayFly-AI/mayfly)
 
 The devices are shipped already flashed and ready with the STM32 code. If you need to update or change the STM32 code, have a look at the [STM32 installation](/manual/pose_sensor/stm32/stm32_install)
 
 For the host and applications code, start by cloning the repository:
 ```bash
-git clone https://github.com/MayFly-AI/sensorleap.git
+git clone https://github.com/MayFly-AI/mayfly.git
 ```
 
 Then install with:
