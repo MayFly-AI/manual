@@ -35,7 +35,15 @@ on macOS the the code needs access to `/dev/cu.usbmodem-*` which this should jus
 
 
 ### Windows
-For windows, Visual Studio Code can be used..... FINISH THIS
+For windows, Visual Studio Code can be used to build and run the the code including the python API.
+It is necessary to have the 'python native development tools' enabled, see also [https://learn.microsoft.com/en-us/visualstudio/python/working-with-c-cpp-python-in-visual-studio].
 
+To install the python package use the menu  `Tools > Python > Python Environments` and optionally create a virtual environment. For the selected environment choose `Open in PowerShell` and simply type:
+
+```
+pip install .
+```
+
+The mayfly package will now be installed in the selected python environment.
 
 {% include list.liquid all=true %}
