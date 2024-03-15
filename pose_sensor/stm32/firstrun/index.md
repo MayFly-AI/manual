@@ -4,17 +4,17 @@ sort: 3
 
 # First run
 
-To verify that everything is working as expected, connect a tag with USB to your host computer. Then run:
+To verify that everything is working as expected, connect a tag with USB to your host computer. In the mayfly repo root, run:
 
 ```bash
-python examples/python/test.py
+python posesensor/python/examples/test.py
 ```
 
 It will output IMU and magnetometer data in the following python dict format:
 ```bash
 {'type': 'imu', 'time': 431513458999, 'dt': 2048, 'acc': [3.29693341255188, -1.6017781496047974, 8.992942810058594], 'gyr': [0.0010652969358488917, 0.003195890923961997, 0.0010652969358488917], 'mag': [13.116678237915039, 12.640318870544434, 48.51506805419922]}
 ```
-time is a local timestamp from the STM32 in microseconds. dt is delta time from the IMU chip (EXPLAIN THIS BETTER).
+time is a local timestamp from the STM32 in microseconds. dt is delta time from the IMU chip.
 IMU and magnetometer measurements are output together. This is because the magnetometer data is read inside the IMU interrupt.
 
 To get ranging measurements (distance between tag and basestation), power on a basestation and run test.py again.
