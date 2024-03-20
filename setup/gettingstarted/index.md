@@ -68,8 +68,7 @@ The example simple_camera.py uses the OpenH264 decoder. If you have a NVIDIA GPU
 python simple_camera_cuda.py --ip XXX.XXX.XXX.XXX --port 8999
 ```
 
-**Recommendations:**
-
+## Recommendations
 - We recommend the CM4 with external WiFi antenna for good WiFi performance.
 
 - We recommend using a dedicated access point. We have good experience with ASUS ZenWiFi Pro ET12. 
