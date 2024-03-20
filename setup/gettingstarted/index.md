@@ -68,6 +68,16 @@ The example simple_camera.py uses the OpenH264 decoder. If you have a NVIDIA GPU
 python simple_camera_cuda.py --ip XXX.XXX.XXX.XXX --port 8999
 ```
 
-**Recommendations:** We recommend the CM4 with external WiFi antenna for good WiFi performance.
+**Recommendations:**
+
+- We recommend the CM4 with external WiFi antenna for good WiFi performance.
+
+- We recommend using a dedicated access point. We have good experience with ASUS ZenWiFi Pro ET12. 
+On the access point, we disable the 2.4GHz and 6Ghz bands and for the 5Ghz band, we set it to 80MHz bandwith and find an undisturbed channel.
+On the RPI4, check the established wifi connection with
+```bash
+iw dev wlan0 info
+```
+It should list the channel and 80MHz bandwith.
 
 {% include list.liquid all=true %}
