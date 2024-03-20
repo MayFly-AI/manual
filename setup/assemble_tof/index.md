@@ -34,7 +34,7 @@ and comment out this line like this:
 #camera_auto_detect=1
 ```
 - Reboot
-- Follow the [ToF example instructions](https://github.com/MayFly-AI/picam/tree/main/python/examples/tof_camera).
+- Follow the [ToF example instructions](https://github.com/MayFly-AI/mayfly/tree/main/python/examples/tof_camera).
 
 After attachiching everything, it will look like this:
 <img src="tof_build.jpg" alt="Tof build" height="800"/>
